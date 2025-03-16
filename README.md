@@ -10,21 +10,31 @@
 - 自动检测客户端设备信息
 - 服务端自动托管客户端网页
 
-## 系统要求
+## 服务端结构
+speedtest-server/
+├── package.json           # 项目依赖和脚本
+├── server.js              # 主入口文件
+├── src/
+│   ├── config.js          # 配置文件
+│   ├── server/            # 服务器相关代码
+│   ├── services/          # 业务逻辑服务
+│   └── utils/             # 工具函数
+└── public/                # 静态文件（如有）
 
-### 标准版本
-- Windows 10/11, macOS, 或 Linux
-- Node.js 14.x 或更高版本
+## 客户端结构
+speedtest-client/
+├── index.html             # 主HTML文件
+├── css/                   # 样式文件
+├── js/                    # JavaScript文件
+│   ├── main.js            # 主逻辑
+│   ├── socket-client.js   # 通信客户端
+│   ├── speed-test.js      # 测速逻辑
+│   └── components/        # UI组件
+└── assets/                # 图像等资源
 
-### Windows 7 兼容版本
-- Windows 7 SP1 或更高版本
-- 自动下载兼容的 Node.js 版本
 
-### 自包含版本
-- Windows, macOS, 或 Linux
-- 完全自包含，无需任何外部依赖
-- 无需互联网连接
-- 适用于完全离线环境
+![image](https://github.com/user-attachments/assets/3f7d73f2-793f-420e-af1b-0db19b881f2d)
+![image](https://github.com/user-attachments/assets/81d707f1-2161-4a9a-adba-b97447b7ee35)
 
 ## 快速开始
 
@@ -38,41 +48,12 @@
 2. 双击运行 `start-server-win7.bat`
 3. 在浏览器中访问显示的URL (例如 http://192.168.1.100:3000)
 
-### Linux/macOS (标准版本)
-1. 下载并解压缩项目文件
-2. 打开终端并导航到项目目录
-3. 运行 `chmod +x start-server.sh && ./start-server.sh`
-4. 在浏览器中访问显示的URL (例如 http://192.168.1.100:3000)
-
-## 使用方法
-1. 在服务器电脑上启动服务器
-2. 记下服务器显示的IP地址
-3. 在其他设备上打开浏览器，访问服务器IP地址 (例如 http://192.168.1.100:3000)
-4. 点击"开始测试"按钮进行测速
-
-## 版本说明
-
-### 标准版本
-- 完整测速功能
-- 完全自包含，无需任何外部依赖
-- 无需互联网连接，适用于完全离线环境
-- 一键启动，即开即用
-- 支持Windows和Linux/macOS
-
-### Windows 7 兼容版本
-- 与标准版本功能相同
-- 自动下载兼容Windows 7的Node.js版本
-- 需要互联网连接
-
-
 ## 注意事项
-
 - 确保服务器和客户端在同一个局域网内
 - 测试结果受网络环境和设备性能影响
 - 服务器日志会显示连接的客户端信息和测试结果
 
 ## 故障排除
-
 ### 无法启动服务器
 - 确保您有足够的权限运行脚本
 - 检查防火墙设置，确保端口3000未被阻止
