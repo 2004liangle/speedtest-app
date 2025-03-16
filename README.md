@@ -11,14 +11,23 @@
 - 服务端自动托管客户端网页
 
 ## 服务端结构
+
 speedtest-server/
+
 ├── package.json           # 项目依赖和脚本
+
 ├── server.js              # 主入口文件
+
 ├── src/
+
 │   ├── config.js          # 配置文件
+
 │   ├── server/            # 服务器相关代码
+
 │   ├── services/          # 业务逻辑服务
+
 │   └── utils/             # 工具函数
+
 └── public/                # 静态文件（如有）
 
 ## 客户端结构
