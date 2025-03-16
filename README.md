@@ -32,13 +32,21 @@ speedtest-server/
 
 ## 客户端结构
 speedtest-client/
+
 ├── index.html             # 主HTML文件
+
 ├── css/                   # 样式文件
+
 ├── js/                    # JavaScript文件
+
 │   ├── main.js            # 主逻辑
+
 │   ├── socket-client.js   # 通信客户端
+
 │   ├── speed-test.js      # 测速逻辑
+
 │   └── components/        # UI组件
+
 └── assets/                # 图像等资源
 
 
