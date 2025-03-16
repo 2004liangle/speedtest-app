@@ -1,0 +1,32 @@
+/* 仪表盘样式 */
+
+.gauge-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gauge-value {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.gauge-label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+  .gauge-value {
+    font-size: 1.5rem;
+  }
+}
